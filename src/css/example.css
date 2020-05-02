@@ -1,0 +1,23 @@
+#main_div{
+    width:70%;
+    height:99vh;
+
+    display:inline-block;
+    position:relative;
+}
+
+#example_img{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+#side_menu{
+    height: 99vh;
+    width: 30%;
+
+    float:right;
+
+    background-color: lightblue;
+}
