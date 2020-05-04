@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const App = () => {
 
@@ -10,7 +10,11 @@ const App = () => {
                 </div>
             </div>
             <div id="side_menu">
-                
+                <div className='input'>
+                    <span><label>Tag:</label></span>
+                    <span><input className='tag form-control' type="text"></input></span>
+                    <input className="name form-control" type="text"></input>
+                </div>
             </div>
         </>
     )
