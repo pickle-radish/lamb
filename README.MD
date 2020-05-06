@@ -8,3 +8,9 @@
 - Node.js
 - React
 - Heroku
+
+
+
+### 2. typescript적용 프로젝트 만들기
+
+https://the-illusionist.me/77
