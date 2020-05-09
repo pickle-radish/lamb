@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './css/example.css';
 import html2canvas from 'html2canvas';
 import jsPDF  from 'jspdf';
@@ -16,7 +15,7 @@ function App() {
             pdf.addImage(dataURL, 'JPEG', 0,0);
             pdf.addImage(dataURL, 'JPEG', 100,0);
 
-            pdf.save('saved.pdf')
+            pdf.save('saved.pdf');
         })
 
     }
@@ -26,9 +25,8 @@ function App() {
         <div id="main_div">
             <div id="frame">
                 <div id="example_img">
-                    <img src="/img/b.jpg"></img>   
+                    <img src="/img/b.jpg" alt="이미지 b"></img>   
                     <div id="text1">나상문</div>
-                    
                 </div>
             </div>
         </div>
