@@ -7,6 +7,8 @@ import {Modal, Button} from 'react-bootstrap';
 function Customizing(props: any) {
 
     const [show, setShow] = useState(false);
+    const [count, setCount] = useState(0);
+    
 
     const savePDF = async () => {
 
@@ -22,9 +24,14 @@ function Customizing(props: any) {
 
     }
 
+
     const openModal = () => {
         setShow(true);
         console.log("click the open modal");
+    }
+
+    const printCount = () => {
+        console.log(count);
     }
 
 
@@ -53,8 +60,25 @@ function Customizing(props: any) {
                 <div>
                     <button onClick={openModal}>다음 페이지</button>
                 </div>
+                <button onClick={printCount}>Count 출력하기</button>
             </div>
-            <Modal show={show} onHide={() => setShow(false)} ></Modal>
+            <Modal show={show} onHide={() => setShow(false)}  size="sm" aria-labelledby="contained-modal-title-vcenter" centered>
+                <Modal.Header closeButton>
+                    <Modal.Title id="contained-modal-title-vcenter">
+                    Modal heading
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <div id="countDiv">
+                        <label>인원수</label><br></br>
+                        <input type="number" className="form-control" name="count" onChange={(e: any) => setCount(e.target.value)}></input> 명
+                    </div>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button>다음페이지</Button>
+                </Modal.Footer>
+                
+            </Modal>
         </>
     );
 }
