@@ -9,11 +9,11 @@ import './css/example.css';
 import './css/main.css';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <>
     <HashRouter>
       <Route />
     </HashRouter>
-  </React.StrictMode>,
+  </>,
   document.getElementById('container')
 );
 
