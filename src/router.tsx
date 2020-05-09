@@ -1,13 +1,13 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import Customizing from "./Customizing";
+import Main from "./main";
+import Customizing from "./customizing";
 
 const Router = () => {
     return (
       <>
-        {/* <Route exact path="/" component={Map}></Route> */}
-        <Route path="/" component={Customizing}></Route>
-        
+        <Route exact path="/" component={Main}></Route>
+        <Route path="/imgTemplate/:id" component={Customizing}></Route>
       </>
     );
   };

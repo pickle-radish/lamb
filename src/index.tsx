@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/example.css';
 import Route from './router'
 import * as serviceWorker from './serviceWorker';
 import { HashRouter } from "react-router-dom";
+
+
+import './css/example.css';
+import './css/main.css';
 
 ReactDOM.render(
   <React.StrictMode>
