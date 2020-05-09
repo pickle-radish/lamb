@@ -7,6 +7,7 @@ import { HashRouter } from "react-router-dom";
 
 import './css/example.css';
 import './css/main.css';
+import './css/list.css';
 
 ReactDOM.render(
   <>

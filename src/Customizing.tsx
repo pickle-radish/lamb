@@ -24,17 +24,6 @@ function Customizing(props: any) {
 
     }
 
-
-    const openModal = () => {
-        setShow(true);
-        console.log("click the open modal");
-    }
-
-    const printCount = () => {
-        console.log(count);
-    }
-
-
     const imgPth: string = `/img/${props.match.params.id}.jpg`;
 
     return (
@@ -58,9 +47,8 @@ function Customizing(props: any) {
                     <button onClick={savePDF}>저장하기</button>
                 </div>
                 <div>
-                    <button onClick={openModal}>다음 페이지</button>
+                    <button onClick={()=>setShow(true)}>다음 페이지</button>
                 </div>
-                <button onClick={printCount}>Count 출력하기</button>
             </div>
             <Modal show={show} onHide={() => setShow(false)}  size="sm" aria-labelledby="contained-modal-title-vcenter" centered>
                 <Modal.Header closeButton>
@@ -75,9 +63,8 @@ function Customizing(props: any) {
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button>다음페이지</Button>
+                    <NavLink to={{pathname:'/list', state:{count}}}><Button>다음페이지</Button></NavLink>
                 </Modal.Footer>
-                
             </Modal>
         </>
     );
