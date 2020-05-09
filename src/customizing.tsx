@@ -14,7 +14,7 @@ function Customizing(props: any) {
 
         const pdf = new jsPDF('p', 'mm', 'a4');
         
-        const printArea1 = document.getElementById("frame1");
+        const printArea1 = document.getElementById("frame");
         const canvas = await html2canvas(printArea1!);
         
         const dataURL = canvas.toDataURL();
@@ -63,7 +63,7 @@ function Customizing(props: any) {
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
-                    <NavLink to={{pathname:'/list', state:{count}}}><Button>다음페이지</Button></NavLink>
+                    <NavLink to={{pathname:`/list/${props.match.params.id}`, state:{count}}}><Button>다음페이지</Button></NavLink>
                 </Modal.Footer>
             </Modal>
         </>

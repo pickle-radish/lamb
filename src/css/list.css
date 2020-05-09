@@ -1,0 +1,26 @@
+#inputList {
+    margin: 100px;
+    background-color: whitesmoke;
+
+    padding: 10px;
+}
+#inputList label{
+    margin:10px;
+}
+#inputList input {
+    width: 300px;
+    margin: 10px;
+}
+
+#makeBtn {
+    margin:20px;
+    float:right;
+}
+
+#card {
+    
+    position:absolute;
+    /* left: -1000px; */
+    border:1px solid #000000;
+
+}
