@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import {NavLink} from 'react-router-dom';
+import {Modal, Button} from 'react-bootstrap';
 
 function Customizing(props: any) {
+
+    const [show, setShow] = useState(false);
 
     const savePDF = async () => {
 
@@ -18,13 +22,18 @@ function Customizing(props: any) {
 
     }
 
-    console.log(props);
+    const openModal = () => {
+        setShow(true);
+        console.log("click the open modal");
+    }
+
 
     const imgPth: string = `/img/${props.match.params.id}.jpg`;
 
     return (
         <>  
             <div id="main_div">
+                <NavLink to='/'><Button>메인으로 가기</Button></NavLink>
                 <div id="frame">
                     <div id="example_img">
                         <img src={imgPth} alt="명찰"></img>   
@@ -42,9 +51,10 @@ function Customizing(props: any) {
                     <button onClick={savePDF}>저장하기</button>
                 </div>
                 <div>
-                    <button>다음 페이지</button>
+                    <button onClick={openModal}>다음 페이지</button>
                 </div>
             </div>
+            <Modal show={show} onHide={() => setShow(false)} ></Modal>
         </>
     );
 }
