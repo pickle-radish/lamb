@@ -63,7 +63,7 @@ const List = (props:any) => {
                 </Form>
             </div>
             {
-                page && <Redirect to={{pathname:`/print/${props.match.params.id}`, state:{card, count:9}}}></Redirect>
+                page && <Redirect to={{pathname:`/print/${props.match.params.id}`, state:{card, count:5}}}></Redirect>
             }
             
         </>
